@@ -1,31 +1,31 @@
-# Name of the project
+# Basement Water Control
 
 ![Overview](./resources/Overview.png)
 
 ## About the project
 
-Description of the project **with a picture or video** and sequence of operation.
+The basement is consistently flooded with groundwater. To address this issue, a hole has been made in the floor to collect the water, which is then pumped out using a submersible pump. However, due to the shallow depth of the hole, the pump's float switch cannot function effectively. To address this issue, an Arduino is used to detect when the hole in the floor is filled with water. Upon detection, the Arduino will activate a relay to power the submersible pump. The float switch of the pump will be fixed to ensure continuous operation.
 
 **Sequence of operation**
 
-1. sequence A
-1. sequence B
-1. sequence C
+1. Position two loose wires at the upper detection level.
+
+1. Connect the submersible pump to the outlet linked to the relay.
+2. Plug in the USB cable of the Arduino.
+3. The Arduino awaits water detection (short-circuit pins from step 1).
+4. Upon continuous water detection for more than 5 seconds (debounce), activate relay
+5. The pump is activated for 10 seconds.
 
 
 
 ## Materials and methods
 
-- Bosch Linear module MKK-040-NN-3
-- Bosch Indradrive HCS01.1E-W0003-A-02-B-ET-EC-NN-L4-NN-FW
-  - [IndraWorks DS v15](https://www.boschrexroth.com/en/xc/products/product-groups/electric-drives-and-controls/engineering/software-tools/indraworks-engineering) met de offline versie [IndraWorks ML](https://www.boschrexroth.com/en/xc/myrexroth/document-library?p_p_id=20&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_20_struts_action=%2Fdocument_library%2Fview_file_entry&_20_redirect=https%3A%2F%2Fwww.boschrexroth.com%2Fen%2Fweb%2Fxc%2Fmyrexroth%2Fdocument-library%3Fp_p_id%3D20%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-1%26p_p_col_count%3D1%26_20_struts_action%3D%252Fdocument_library%252Fview%26_20_folderId%3D6880008&_20_fileEntryId=6887991&_20_displayed_description=Engineering+software%3B%0AType+code%3A+SWA-IWORKS-ML*-13VRS-D0-DVD**%3B%0ASelf+extracting+installation+program%3B%0AFull+installation+incl.+online+help%3B%0AInstallation+is+subject+to+license+conditions+and+requires+an+activation+key%0A%28alternative+30+day+test+license%29%3B%0A%0ASupported+installation+variants%3A%0AEngineering+MLC+%2F+%0AEngineering+ILC+%2F+%0AOperation+ILC%2C+MLC+%2F+%0ACommunication+ILC%2C+MLC+%2F+%0AWinStudio+Runtime+%2F+%0AMLD+Engineering+%2B+Technology+Functions+%2F+%0ATeamserver+ILC%2C+MLC)
-- Bosch SUP-E02-MSM-BATTERY
-- Beckhoff 6920
-  - [TwinCAT 3](https://www.beckhoff.com/en-us/products/automation/twincat/te1xxx-twincat-3-engineering/te1000.html)
-  - TF6820 controller (library)
-- PSoC6 Wifi/BT pioneer kit with the BMI-160
-  - [ModusToolBox](https://www.cypress.com/products/modustoolbox)
-  - Hardware Abstraction Layer (library)
+- Kärcher SP 9 Flat
+- Arduino
+- Jumper wires
+- Relay board TC-9072472
+- Extension cable
+- 1 Core Electrical Cable, 1.5 mm
 
 
 
@@ -92,5 +92,4 @@ Check out our [contributing page](.github/contributing.md) for how to add issues
 
 ## People
 
-- **CONTRI BUTOR1** - _CONTRIBUTOR_ - [CONTRI BUTOR1](https://github.com/CONTRIBUTOR1)
-- **Dieter Vanrykel** - _TEACHER_ - [Dieter Vanrykel](https://github.com/Vanrykel)
+- **Dieter Vanrykel** - _OWNER_ - [Dieter Vanrykel](https://github.com/Vanrykel)
