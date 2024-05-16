@@ -1,0 +1,22 @@
+name: review a new PR
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  assignee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign PR Assignee
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo, number } = context.issue;
+            const assignee = 'Vanrykel';
+            await github.issues.addAssignees({
+              owner,
+              repo,
+              issue_number: number,
+              assignees: [assignee]
+            });
+            
